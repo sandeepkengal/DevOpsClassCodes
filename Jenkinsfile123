@@ -28,7 +28,8 @@ pipeline{
 
         stage('deploy'){
             steps{
-                sh "sudo cp -r /home/ubuntu/var/lib/jenkins/workspace/new-project/target/*.war ubuntu@13.235.104.113:/opt/tomcat/webapps"
+                sh "cd /home/ubuntu/workspace/new-project/target"
+                sh "sudo cp *.war /opt/tomcat/webapps"
             }
         }
 }
