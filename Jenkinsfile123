@@ -9,7 +9,7 @@ pipeline{
     }
         stage('parallel'){
             parallel{
-        }
+        
         stage('code-cpmpile'){
             steps{
                 sh "mvn compile"
@@ -22,7 +22,7 @@ pipeline{
             }
         }
         }
-
+        }
         stage('quality-asuarance'){
             steps{
                 sh "mvn pmd:pmd"
