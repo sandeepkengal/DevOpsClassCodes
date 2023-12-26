@@ -25,6 +25,12 @@ pipeline{
                 sh "mvn pmd:pmd"
             }
         }
+
+        stage('deploy'){
+            steps{
+                pwd
+            }
+        }
 }
 
 }
