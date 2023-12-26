@@ -1,5 +1,5 @@
 pipeline{
-    agent { label 'tomcat' }
+    agent { label 'built-in' }
 
     stages{
         stage('code-checkout'){
