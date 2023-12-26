@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('code-checkout'){
+            steps{
+            git credentialsId: 'githubcred', url: 'https://github.com/sandeepkengal/DevOpsClassCodes.git'
+        }
+    }
+
+        stage('code-cpmpile'){
+            steps{
+                sh "mvn compile"
+            }
+        }
+}
+
+}
