@@ -1,5 +1,5 @@
 pipeline{
-    agent tomcat
+    agent {tomcat}
 
     stages{
         stage('code-checkout'){
