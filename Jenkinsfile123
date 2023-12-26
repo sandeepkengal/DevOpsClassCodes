@@ -13,6 +13,18 @@ pipeline{
                 sh "mvn compile"
             }
         }
+
+        stage('code-testing'){
+            steps{
+                sh "mvn test"
+            }
+        }
+
+        stage('quality-asuarance'){
+            steps{
+                sh "mvn pmd:pmd"
+            }
+        }
 }
 
 }
